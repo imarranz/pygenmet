@@ -11,7 +11,7 @@ In this study, a specific Genetic Algorithm (GA) has been developed to improve t
 
 The genetic algorithm has been developed in Python language and NumPy Style Python Docstrings has been used to document the package.
 
-[example numpy style python docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html#example-numpy)
+[example numpy style python docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html#example-numpy)  
 [numpydoc docstring guide](https://numpydoc.readthedocs.io/en/latest/format.html)
 
 ![png](figures/algorithm_functions.png)
