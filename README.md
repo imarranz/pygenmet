@@ -9,33 +9,32 @@ We collected liver and serum from several murine models, which have genetic alte
 
 In this study, a specific Genetic Algorithm (GA) has been developed to improve the identification of these subtypes in a human cohort and create a scalable methodology to identify subtypes of NAFLD. The final aim of this work is to develop a methodology for precision care in NAFLD.
 
-The genetic algorithm has been developed in Python language and NumPy Style Python Docstrings[^style1][^style2] has been used to document the package.
+The genetic algorithm has been developed in Python language and NumPy Style Python Docstrings has been used to document the package.
 
-[^style1]: [example numpy style python docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html#example-numpy)
-[^style2]: [numpydoc docstring guide](https://numpydoc.readthedocs.io/en/latest/format.html)
+[example numpy style python docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html#example-numpy)
+[numpydoc docstring guide](https://numpydoc.readthedocs.io/en/latest/format.html)
 
 ![png](figures/algorithm_functions.png)
 **FIGURE**: Genetic algorithm schema and functions associated with each step.
 
-
   * **INITIAL POPULATION/POPULATION**
-    * \_get\_father(): See {ref}`tools:_get_father` function.
-    * \_get\_population(): See {ref}`tools:_get_population` function.  
+    * \_get\_father(): See `tools:_get_father` function.
+    * \_get\_population(): See `tools:_get_population` function.  
     
   * **FITNESS**         
-    * \_get\_fitness(): See {ref}`fitness:_get_fitness` function.
-    * \_get_fitness_robust(): See {ref}`fitness:_get_fitness_robust` function.
-    * \_get_fitness_l(): See {ref}`fitness:_get_fitness_l` function. 
+    * \_get\_fitness(): See `fitness:_get_fitness` function.
+    * \_get_fitness_robust(): See `fitness:_get_fitness_robust` function.
+    * \_get_fitness_l(): See `fitness:_get_fitness_l` function. 
   
   * **SELECTION**     
-    * \_selection(): See {ref}`operators:_selection` function.
+    * \_selection(): See `operators:_selection` function.
   
   * **CROSSOVER**     
-    * \_crossover(): See {ref}`operators:_crossover` function.
-    * \_arithmetic\_crossover(): See {ref}`operators:_arithmetic_crossover` function.
+    * \_crossover(): See `operators:_crossover` function.
+    * \_arithmetic\_crossover(): See `operators:_arithmetic_crossover` function.
   
   * **MUTATION**
-    * \_mutation(): See {ref}`operators:_mutation` function. 
+    * \_mutation(): See `operators:_mutation` function. 
 
 ![png](figures/translational_strategy.png)
 **FIGURE**: Genetic Algorithms Applied to Translational Strategy in NASH. Learning from Mouse Models. Poster presented in the II Jornadas Doctorales de la UPV/EHU 2019.
@@ -1157,3 +1156,12 @@ ax.legend(frameon = False, title = r'Probability', bbox_to_anchor = [1.0, 1.0]);
 ```
 
 
+## References
+
+Alonso, C., Fernández-Ramos, D., Varela-Rey, M., Martínez-Arranz, I., Navasa, N., Van Liempd, S. M., Lavin, J. L., Mayo, R., Ilisso, C. P., de Juan, V. G., Iruarrizaga-Lejarreta, M., delaCruz-Villar, L., Mincholé, I., Robinson, A., Crespo, J., Martín-Duce, A., Romero-Gomez, M., Sann, H., Platon, J., ... Mato, J. M. (2017). _Metabolomic Identification of Subtypes of Nonalcoholic Steatohepatitis_. Gastroenterology. https://doi.org/10.1053/j.gastro.2017.01.015
+
+Iruarrizaga-Lejarreta, M., Varela-Rey, M., Fernández-Ramos, D., Martínez-Arranz, I., Delgado, T. C., Simon, J., Gutiérrez-de Juan, V., delaCruz-Villar, L., Azkargorta, M., Lavin, J. L., Mayo, R., Van Liempd, S. M., Aurrekoetxea, I., Buqué, X., Delle Cave, D., Peña, A., Rodríguez-Cuesta, J., Aransay, A. M., Elortza, F., ... Mato, J. M. (2017). _Role of aramchol in steatohepatitis and fibrosis in mice_. Hepatology Communications. https://doi.org/10.1002/hep4.1107
+
+Martinez-Arranz, I., Mayo, R., Pérez-Cormenzana, M., Mincholé, I., Salazar, L., Alonso, C., & Mato, J. M. (2015). _Enhancing metabolomics research through data mining_. J Proteomics, 127(Pt B), 275–288. https://doi.org/10.1016/j.jprot.2015.01.019
+
+Morrison, M. C., Verschuren, L., Salic, K., Verheij, J., Menke, A., Wielinga, P. Y., Iruarrizaga-Lejarreta, M., Gole, L., Yu, W.-M., Turner, S., Caspers, M. P. M., Martínez-Arranz, I., Pieterman, E., Stoop, R., van Koppen, A., van den Hoek, A. M., Mato, J. M., Hanemaaijer, R., Alonso, C., & Kleemann, R. (2018). _Obeticholic Acid Modulates Serum Metabolites and Gene Signatures Characteristic of Human NASH and Attenuates Inflammation and Fibrosis Progression in Ldlr-/-.Leiden Mice_. Hepatology Communications, 2(12), 1513–1532. https://doi.org/10.1002/hep4.1270
