@@ -1,6 +1,5 @@
 ![](figures/logo.png)
 
-
 # Introduction
 
 Nonalcoholic fatty liver disease (NAFLD) is a consequence of defects in diverse metabolic pathways or nutritional effects that involve a hepatic accumulation of triglycerides. Features of these deviations might determine whether NAFLD progresses to nonalcoholic steatohepatitis (NASH). We investigated whether the diverse defects observed in patients with NAFLD are due to different NAFLD subtypes with specific serum metabolomic profiles and whether these can distinguish patients with NASH from patients with simple steatosis.
@@ -9,7 +8,7 @@ We collected liver and serum from several murine models, which have genetic alte
 
 In this study, a specific Genetic Algorithm (GA) has been developed to improve the identification of these subtypes in a human cohort and create a scalable methodology to identify subtypes of NAFLD. The final aim of this work is to develop a methodology for precision care in NAFLD.
 
-The genetic algorithm has been developed in Python language and NumPy Style Python Docstrings has been used to document the package.
+This package has been developed in Python language and NumPy Style Python Docstrings has been used to document the package.
 
 [example numpy style python docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html#example-numpy)  
 [numpydoc docstring guide](https://numpydoc.readthedocs.io/en/latest/format.html)
@@ -49,7 +48,7 @@ from pygenmet import *
 
 With Pyhton a `class`can be created. A `class` provides a lot of functionalities. We can create a new `clas` and then we can create a new type of object in Python. This new `class` allows new instances and these instances can also have `methods`.
 
-The `class chromosome` has been created to optimization the algorithm. The `docstring` associated to the `chromosome` class is the following.
+The `class chromosome` has been created to optimizate the algorithm. The `docstring` associated to the `chromosome` class is the following.
 
 ```python
 ?chromosome
@@ -485,15 +484,15 @@ The `docstring` associated to the `_crossover` function is the following.
     The _replacement function is ised to change the old generation population with the new generation. 
     Four process have been evaluated [1]:
     
-    1) Reemplazar  el  Peor  (Replace  Worst  Strategy,  RW).  Se  reemplaza  el  peor  elemento  de  la  población  si  el  hijo  lo  mejora.  
-    Ofrece  alta  presión  selectiva,  incluso cuando sus padres son elegidos aleatoriamente.
+     1) Replace Worst Strategy (RW). The worst element of the population is replaced if the child improves it.
+     It offers high selective pressure, even when its parents are chosen randomly.
     
-    2) Selección de Torneo Restringido (Restricted Tournament Selection, RTS) [2].    
+     2) Restricted Tournament Selection (RTS) [2].
     
-    3) Reemplazar el Peor Entre Semejantes (Worst Among Most Similar Replacement, WAMS)  [3]. se reemplaza el peor cromosoma del 
-    conjunto de los N (N = 3, . . . ) padres mas parecidos al descendiente.
+     3) Replace the Worst Among Most Similar Replacement (WAMS) [3]. the worst chromosome of the
+     set of the N (N = 3,...) parents most similar to the offspring.
     
-    4) Algoritmo de Crowding Determinístico (Deterministic Crowding, DC) [4].  Para facilitar la comparativa  utilizaremos  en  nuestros  experimentos. Una variante del DC en el que para cada cruce se generará un único descendente, que sustituirá al padre más parecido en el caso de que lo mejore. 
+     4) Deterministic Crowding Algorithm (Deterministic Crowding, DC) [4]. To facilitate the comparison we will use in our experiments. A variant of the DC in which a single descendant will be generated for each cross, which will replace the most similar parent if it improves it. 
     
     References
     ----------
