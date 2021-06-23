@@ -4,11 +4,11 @@
 
 Nonalcoholic fatty liver disease (NAFLD) is a consequence of defects in diverse metabolic pathways or nutritional effects that involve a hepatic accumulation of triglycerides. Features of these deviations might determine whether NAFLD progresses to nonalcoholic steatohepatitis (NASH). We investigated whether the diverse defects observed in patients with NAFLD are due to different NAFLD subtypes with specific serum metabolomic profiles and whether these can distinguish patients with NASH from patients with simple steatosis.
 
-We collected liver and serum from several murine models, which have genetic alterations, nutritional alterations or both. I also analyzed serum metabolomes of 535 patients with biopsy-proven NAFLD (353 with simple steatosis and 182 with NASH) and compared them with serum metabolomes of these murine models. In a previous analysis, we identified several subtypes of NAFLD using cluster analysis and we recognized markers that differentiate steatosis from NASH in each subtype.
+We collected liver and serum from several murine models, which have genetic alterations, nutritional alterations or both. We also analyzed serum metabolomes of 535 patients with biopsy-proven NAFLD (353 with simple steatosis and 182 with NASH) and compared them with serum metabolomes of these murine models. In a previous analysis, we identified several subtypes of NAFLD using cluster analysis and we recognized markers that differentiate steatosis from NASH in each subtype.
 
 In this study, a specific Genetic Algorithm (GA) has been developed to improve the identification of these subtypes in a human cohort and create a scalable methodology to identify subtypes of NAFLD. The final aim of this work is to develop a methodology for precision care in NAFLD.
 
-This package has been developed in Python language and NumPy Style Python Docstrings has been used to document the package.
+Genetic Algorithms are a very useful tool to solve optimization problems but they need a good definition of a fitness function. This package has been developed in Python language and NumPy Style Python Docstrings has been used to document the package.
 
 [example numpy style python docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html#example-numpy)  
 [numpydoc docstring guide](https://numpydoc.readthedocs.io/en/latest/format.html)
