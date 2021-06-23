@@ -1164,3 +1164,44 @@ Iruarrizaga-Lejarreta, M., Varela-Rey, M., Fernández-Ramos, D., Martínez-Arran
 Martinez-Arranz, I., Mayo, R., Pérez-Cormenzana, M., Mincholé, I., Salazar, L., Alonso, C., & Mato, J. M. (2015). _Enhancing metabolomics research through data mining_. J Proteomics, 127(Pt B), 275–288. https://doi.org/10.1016/j.jprot.2015.01.019
 
 Morrison, M. C., Verschuren, L., Salic, K., Verheij, J., Menke, A., Wielinga, P. Y., Iruarrizaga-Lejarreta, M., Gole, L., Yu, W.-M., Turner, S., Caspers, M. P. M., Martínez-Arranz, I., Pieterman, E., Stoop, R., van Koppen, A., van den Hoek, A. M., Mato, J. M., Hanemaaijer, R., Alonso, C., & Kleemann, R. (2018). _Obeticholic Acid Modulates Serum Metabolites and Gene Signatures Characteristic of Human NASH and Attenuates Inflammation and Fibrosis Progression in Ldlr-/-.Leiden Mice_. Hepatology Communications, 2(12), 1513–1532. https://doi.org/10.1002/hep4.1270
+
+Affenzeller, M., Wagner, S., Winkler, S., & Beham, A. (2009). Genetic Algorithms and Genetic Programming: Modern Concepts and Practical Applications. CRC Press.  
+
+Cavill, R., Keun, H. C., Holmes, E., Lindon, J. C., Nicholson, J. K., & Ebbels, T. M. D. (2009). Genetic algorithms for simultaneous variable and sample selection in metabonomics. Bioinformatics (Oxford, England), 25(1), 112–118. https://doi.org/10.1093/bioinformatics/btn586
+
+Chambers, L. (1995). Practical Handbook of Genetic Algorithms: Volume 1: Applications. CRC-Press.  
+
+Chambers, L. D. (2019a). Practical Handbook of Genetic Algorithms: Complex Coding Systems, Volume III. CRC Press.  
+
+Chambers, L. D. (2019b). The Practical Handbook of Genetic Algorithms: New Frontiers, Volume II. CRC Press.  
+
+Eiben, A. E., & Smith, J. E. (2015). Introduction to Evolutionary Computing. Springer.
+Gandomi, A. H., Alavi, A. H., & Ryan, C. (2015). Handbook of Genetic Programming Applications. Springer.
+
+Gen, M., & Cheng, R. (1999). Genetic Algorithms and Engineering Optimization. John Wiley & Sons.  
+
+Haupt, R. L., & Haupt, S. E. (2004). Practical Genetic Algorithms. John Wiley & Sons.  
+
+Haupt, R. L., & Werner, D. H. (2007). Genetic Algorithms in Electromagnetics. John Wiley & Sons.  
+
+Holland, J. H. (1992). Genetic Algorithms. Scientific American, 267(1), 66–73. JSTOR.  
+
+Kramer, O. (2017). Genetic Algorithm Essentials. Springer.  
+
+Luque, G., & Alba, E. (2011). Parallel Genetic Algorithms: Theory and Real World Applications. Springer Science & Business Media.  
+
+Michalewicz, Z. (2013). Genetic Algorithms + Data Structures = Evolution Programs. Springer Science & Business Media.  
+
+Mitchell, M. (1998). An Introduction to Genetic Algorithms. MIT Press.  
+
+Petrowski, A., & Ben-Hamida, S. (2017). Evolutionary Algorithms. John Wiley & Sons.  
+
+Reeves, C. R., & Rowe, J. E. (2006). Genetic Algorithms: Principles and Perspectives: A Guide to GA Theory. Springer Science & Business Media.  
+
+Sheppard, C. (2018). Genetic Algorithms with Python. Clinton Sheppard.  
+
+Shiffman, D. (2012). The Nature of Code. D. Shiffman.  
+
+Sivanandam, S. N., & Deepa, S. N. (2007). Introduction to Genetic Algorithms. Springer Science & Business Media.  
+
+Walchand College of Engineering, A.J., U., P.D., S., & Government College of Engineering, Karad. (2015). CROSSOVER OPERATORS IN GENETIC ALGORITHMS: A REVIEW. ICTACT Journal on Soft Computing, 06(01), 1083–1092. https://doi.org/10.21917/ijsc.2015.0150
