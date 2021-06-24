@@ -24,15 +24,15 @@ def _get_multifitness(genes, nwt, nko, dwt, dko, obj):
     Notes
     -----
     
-    El geneSet será ahora de 13 caracteres (los mismos que modelos de ratón) más
-    el 0. Cada caracter representa un modelo de ratón y cogerenmos los casos en el 
-    dataset de los Knock-Out. Ahora bien, para los genes de los wild type, voy a 
-    considerar a todos los que no sean '0'. En el caso de los Knock-Out, el '0' 
-    indica que es una muestra que no se clasifica 8no optimiza) ningún otro grupo. 
-    Podría ser outliers o simplemente no ser de los grupos considerados.
+     The geneSet will now be 13 characters (the same as mouse models) plus
+     the 0. Each character represents a mouse model and let's take the cases in the
+     Knock-Out dataset. Now for the wild type genes, I'm going to
+     consider all those other than '0'. In the case of Knock-Outs, the '0'
+     indicates that it is a sample that is not classified 8not optimized) by any other group.
+     It could be outliers or simply not from the groups considered.
     
-    Me falta ordenar que ocurre si en alguna solución no están representados
-    todos los modelos ¿qué valores devuelve? ¿cómo operar con ellos?
+     I need to order what happens if in some solution they are not represented
+     all models, what values does it return? How to operate with them? 
 
     """
 
@@ -46,17 +46,18 @@ def _get_multifitness(genes, nwt, nko, dwt, dko, obj):
         list_of_correlations.append(p)
         
     """\
-    La función devuelve un único valor que tiene que ser un resumen del 
-    comportamiento de todas las muestras.
+    Resultados de traducción
+    The function returns a single value that has to be a summary of the
+    behavior of all samples.
     
-    La salida más directa sería la correlación promedio, esperando en alcanzar un 
-    máximo que a su vez maximizaría todas los submodelos.
+    The most direct output would be the average correlation, waiting to reach a
+    maximum which in turn would maximize all submodels.
     
-    Otra opción es devolver el mínimo de todas las correlaciones, pero esta
-    opción puede obligar al algoritmo a buscar como sólución un único modelo
-    y el resto clasificarlo como '0'.
+    Another option is to return the minimum of all correlations, but this
+    option can force the algorithm to search for a single model as a solution
+    and the rest classify it as '0'.
     
-    Podríamos pensar también en algún tipo de penalización
+    We could also think of some kind of penalty 
     """
     
     
