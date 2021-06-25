@@ -12,22 +12,26 @@ def _replacement(type = 'rws'):
            rws : Replace Worst Strategy
            rts : Restricted Tournament Selection
            wams : Worst Among Most Similar Replacement
-    
-    
+
     Notes
     -----    
-    The _replacement function is ised to change the old generation population with the new generation. 
-    Four process have been evaluated [1]:
+    The _replacement function is ised to change the old generation population 
+    with the new generation. Four process have been evaluated [1].
     
-    1) Reemplazar  el  Peor  (Replace  Worst  Strategy,  RW).  Se  reemplaza  el  peor  elemento  de  la  población  si  el  hijo  lo  mejora.  
-    Ofrece  alta  presión  selectiva,  incluso cuando sus padres son elegidos aleatoriamente.
+    1) Replace Worst Strategy (RWS). The worst element of the population is 
+    replaced if the child improves it. It offers high selective pressure, 
+    even when its parents are chosen randomly.
     
-    2) Selección de Torneo Restringido (Restricted Tournament Selection, RTS) [2].    
+    2) Restricted Tournament Selection (RTS) [2].
     
-    3) Reemplazar el Peor Entre Semejantes (Worst Among Most Similar Replacement, WAMS)  [3]. se reemplaza el peor cromosoma del 
-    conjunto de los N (N = 3, . . . ) padres más parecidos al descendiente.
+    3) Replace the Worst Among Most Similar Replacement (WAMS) [3]. 
+    The worst chromosome of the set of the N (N = 3,...) parents most similar 
+    to the offspring.
     
-    4) Algoritmo de Crowding Determinístico (Deterministic Crowding, DC) [4].  Para facilitar la comparativa  utilizaremos  en  nuestros  experimentos. Una variante del DC en el que para cada cruce se generará un único descendente, que sustituirá al padre más parecido en el caso de que lo mejore. 
+    4) Deterministic Crowding Algorithm (Deterministic Crowding, DC) [4]. 
+    To facilitate the comparison we will use in our experiments. 
+    A variant of the DC in which a single descendant will be generated for 
+    each cross, which will replace the most similar parent if it improves it.  
     
     References
     ----------
@@ -43,59 +47,75 @@ def _replacement(type = 'rws'):
 def _selection(chromosomes, size = 1, N = 6, trace = False, method = 'random'):
     
     """\
-    HAY DOS TIPOS DE SELECCIÓN. LA QUE SELECCIONA FUTUROS PADRES Y LOS SELECCIONA PADRES PARA CRUZARLOS
+    THERE ARE TWO TYPES OF SELECTION. THE ONE THAT SELECTS FUTURE PARENTS 
+    AND SELECTS THEM PARENTS TO CROSS THEM
     
-    Técnicas de emparejamiento:
-    Los padres se pueden seleccionar de forma que se mantenga la diversidad de la población 
+    MATCHING TECHNIQUES:
     
-    1) Prohibición de cruce basada en ascendencia. Un individuo no puede emparejarse con él mismo, ni con sus padres, ni con sus hijos, ni con sus hermanos
+    Parents can be selected in a way that maintains the diversity of 
+    the population
     
-    2) Prohibición de incesto. Dos padres se cruzan si su distancia Hamming está por encima de cierto umbral
+    1) Prohibition of crossing based on ancestry. An individual cannot 
+    mate with himself, or with his parents, or with his children, 
+    or with his siblings.
     
-    3) Emparejamiento variado. Un individuo se cruza con otro que es bastante diferente. Distancia de Hamming
+    2) Prohibition of incest. Two parents intersect if their Hamming distance 
+    is above a certain threshold
     
-    LA QUE SELECCIONA UNA NUEVA GENERACIÓN
+    3) Varied pairing. One individual crosses paths with another who is 
+    quite different. Hamming distance
+    
+    THE ONE THAT SELECTS A NEW GENERATION:
     
     1) Random Selection (RS)
     
-    2) Tournament Selection (TS): escoge al individuo de mejor
-    fitness de entre N individuos seleccionados aleatoriamente (N = 2, 3, . . . )
-    La selección por torneo, constituye un procedimiento de selección de padres muy extendido y en el cual 
-    la idea consiste en escoger al azar un número de individuos de la población, tamaño del torneo, 
-    (con o sin reemplazamiento), seleccionar el mejor individuo de este grupo, y repetir el proceso hasta que 
-    el número de individuos seleccionados coincida con el tamaño de la población. Habitualmente el 
-    tamaño del torneo es 2, y en tal caso se ha utilizado una versión probabilı́stica en la cual se permite 
-    la selección de individuos sin que necesariamente sean los mejores.
+    2) Tournament Selection (TS): choose the best individual
+    fitness among N randomly selected individuals (N = 2, 3,...)
+    The selection by tournament constitutes a very extended selection 
+    procedure for parents and in which. The idea is to randomly pick a number 
+    of individuals from the population, tournament size,
+    (with or without replacement), select the best individual from this group, 
+    and repeat the process until the number of individuals selected matches 
+    the size of the population. Usually the tournament size is 2, and in this 
+    case a probabilistic version has been used in which it is allowed
+    the selection of individuals without necessarily being the best.
 
-    3) Linear Rank Selection (LRS): la población se ordena en función de su fitness 
-    y se asocia una probabilidad de selección a cada individuo que depende de su orden
+    3) Linear Rank Selection (LRS): the population is ordered based on 
+    its fitness and a selection probability is associated with each 
+    individual that depends on their order.
     
-    4) Selección por Ruleta (Roulette Selection, RS): asigna una probabilidad de selección proporcional al valor del fitness del individuo
-    Baker (1987) introduce un método denominado muestreo universal estocástico, el cual utiliza un único giro 
-    de la ruleta siendo los sectores circulares proporcionales a la función objetivo. Los individuos son 
-    seleccionados a partir de marcadores, igualmente espaciados y con comienzo aleatorio. (algoritmos geneticos.pdf)
+    4) Roulette Selection (RS): assigns a selection probability proportional 
+    to the individual's fitness value Baker (1987) introduces a method called 
+    universal stochastic sampling, which uses a single turn of the roulette 
+    wheel being the circular sectors proportional to the objective function. 
+    The individuals are selected from markers, equally spaced and with 
+    a random start. (genetic algorithms.pdf)
     
-    5) Elitista: En el modelo de selección elitista se fuerza a que el mejor individuo de la población 
-    en el tiempo t, sea seleccionado como padre.
+    5) Elitist: In the elitist selection model, the best individual 
+    in the population is forced to at time t, be selected as the parent. 
     
     Parameters
     ----------
     chromosomes : List of chromosomes of the population
-    size : Number of individuals to select from the population. This parameter is not considered with method = 'elitist'.
+    size : Number of individuals to select from the population. 
+           This parameter is not considered with method = 'elitist'.
     N : Number of Genes to print (if trace is True)
     trace : Should be the chromosomes and the selection printed on the screen
-    method: The method used for selection: ['random', 'tournament', 'linear', 'roulette', 'elitist']
+    method: The method used for selection: 
+            ['random', 'tournament', 'linear', 'roulette', 'elitist']
     
     Returns
     -------
     fitness : The fitness of each chromosome (individual)
-    psel : Probabilities of selecction of each chromosome. pesl(x) = f(x) / sum(f(y)), for each x in y
+    psel : Probabilities of selecction of each chromosome. 
+           pesl(x) = f(x) / sum(f(y)), for each x in y
     selecction : List of selected chromosomes
     
     Notes
     -----
-    The aim of this function is to evaluate the fitness of each population (by the chromosome structure) and 
-    to asign a probability to select for a new population (next generation).
+    The aim of this function is to evaluate the fitness of each population 
+    (by the chromosome structure) and to asign a probability to select 
+    for a new population (next generation).
     
     Examples
     --------
