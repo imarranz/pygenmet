@@ -14,7 +14,7 @@ Genetic Algorithms are a very useful tool to solve optimization problems but the
 [numpydoc docstring guide](https://numpydoc.readthedocs.io/en/latest/format.html)
 
 ![png](figures/algorithm_functions.png)
-**FIGURE**: Genetic algorithm schema and functions associated with each step.
+**FIGURE**: Genetic algorithm scheme and functions associated with each step.
 
   * **INITIAL POPULATION/POPULATION**
     * \_get\_father(): See `tools:_get_father` function.
@@ -39,6 +39,8 @@ Genetic Algorithms are a very useful tool to solve optimization problems but the
 **FIGURE**: Genetic Algorithms Applied to Translational Strategy in NASH. Learning from Mouse Models. Poster presented in the II Jornadas Doctorales de la UPV/EHU 2019.
             
 ## CLASS `chromosome`
+
+One of the contributions of this package is the `chromosome` class as it is specifically designed to easily solve this optimization problem. 
 
 Import the `pygenmet` package
 
@@ -72,9 +74,9 @@ The `class chromosome` has been created to optimizate the algorithm. The `docstr
     -----
     The representation of a chromosome is the following way
         
-    0110101101 ... 0110101101 || 0110110011 ... 0110110011     6     6           0.8945        
-    -------------------------    -------------------------   ----- -----         ------
-                A                            B                 C     D              E
+    0110101101 ... 0110101101 || 0110110011 ... 0110110011     6     6     0.89456        
+    -------------------------    -------------------------   ----- -----   -------
+                A                            B                 C     D        E
                     
     Description of the representation:
       A] Wild Type Genes
