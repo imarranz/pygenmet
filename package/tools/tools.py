@@ -32,9 +32,9 @@ class chromosome:
     -----
     The representation of a chromosome is the following way
         
-    0110101101 ... 0110101101 || 0110110011 ... 0110110011     6     6           0.8945        
-    -------------------------    -------------------------   ----- -----         ------
-                A                            B                 C     D              E
+    0110101101 ... 0110101101 || 0110110011 ... 0110110011     6     6   0.89456        
+    -------------------------    -------------------------   ----- ----- -------
+                A                            B                 C     D      E
                     
     Description of the representation:
       A] Wild Type Genes
@@ -55,7 +55,7 @@ class chromosome:
     >>> print("Fitness: {}".format(CH.Fitness))
     Fitness: 0.8945        
     >>> CH.print() 
-    0110101101 ... 0110101101 || 0110110011 ... 0110110011 	   6	   6	         0.8945        
+    0110101101 ... 0110101101 || 0110110011 ... 0110110011 	   6	   6	 0.89456        
     """
 
     # https://realpython.com/documenting-python-code/
