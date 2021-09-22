@@ -1,8 +1,8 @@
-![](figures/logo.png)
 
-**REFERENCES**
-
+[![Twitter Follow](https://img.shields.io/twitter/follow/imarranz.svg?style=social)](https://twitter.com/imarranz)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5233539.svg)](https://doi.org/10.5281/zenodo.5233539)
+                                                      
+![](figures/logo.png)
 
 # Introduction
 
