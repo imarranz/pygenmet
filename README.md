@@ -1,11 +1,14 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/imarranz.svg?style=social)](https://twitter.com/imarranz)
+**References**  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5233539.svg)](https://doi.org/10.5281/zenodo.5233539)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/imarranz/pygenmet)
-![GitHub commits since tagged version](https://img.shields.io/github/commits-since/imarranz/pygenmet/v1.0.0)
-![GitHub last commit](https://img.shields.io/github/last-commit/imarranz/pygenmet)
+**Version and Activity**  
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/imarranz/pygenmet)<br>
+![GitHub commits since tagged version](https://img.shields.io/github/commits-since/imarranz/pygenmet/v1.0.0)<br>
+![GitHub last commit](https://img.shields.io/github/last-commit/imarranz/pygenmet)<br>
 ![GitHub all releases](https://img.shields.io/github/downloads/imarranz/pygenmet/total)
-![GitHub top language](https://img.shields.io/github/languages/top/imarranz/pygenmet)
+**Analysis**  
+![GitHub top language](https://img.shields.io/github/languages/top/imarranz/pygenmet)<br>
 ![GitHub language count](https://img.shields.io/github/languages/count/imarranz/pygenmet)
 
                                                       
