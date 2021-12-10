@@ -1,3 +1,5 @@
+![](figures/logo.png)
+
 **References**  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5233539.svg)](https://doi.org/10.5281/zenodo.5233539)<br>
 **Version and Activity**  
@@ -12,8 +14,6 @@
 **Social**  
 [![Twitter Follow](https://img.shields.io/twitter/follow/imarranz.svg?style=social)](https://twitter.com/imarranz)
 
-                                                      
-![](figures/logo.png)
 
 # Introduction
 
