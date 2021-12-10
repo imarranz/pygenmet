@@ -2,6 +2,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5233539.svg)](https://doi.org/10.5281/zenodo.5233539)<br>
 **Version and Activity**  
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/imarranz/pygenmet)
+![GitHub Release Date](https://img.shields.io/github/release-date/imarranz/pygenmet)
 ![GitHub commits since tagged version](https://img.shields.io/github/commits-since/imarranz/pygenmet/v1.0.0)
 ![GitHub last commit](https://img.shields.io/github/last-commit/imarranz/pygenmet)
 ![GitHub all releases](https://img.shields.io/github/downloads/imarranz/pygenmet/total)<br>
