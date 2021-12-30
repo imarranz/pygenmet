@@ -14,6 +14,16 @@
 **Social**  
 [![Twitter Follow](https://img.shields.io/twitter/follow/imarranz.svg?style=social)](https://twitter.com/imarranz)
 
+# How to use
+
+You can use the `sys` package to import the `pygenmet` package.
+
+```
+import sys
+
+sys.path.insert(', 'pygement_path')
+import pygenmet
+```
 
 # Introduction
 
