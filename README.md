@@ -18,7 +18,7 @@
 
 You can use the `sys` package to import the `pygenmet` package.
 
-```
+```python
 import sys
 
 sys.path.insert(', 'pygement_path')
