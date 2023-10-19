@@ -534,40 +534,39 @@ The `docstring` associated to the `_crossover` function is the following.
 ?_selection
 ```
 
-    HAY DOS TIPOS DE SELECCIÓN. LA QUE SELECCIONA FUTUROS PADRES Y LOS SELECCIONA PADRES PARA CRUZARLOS
+    THERE ARE TWO TYPES OF SELECTION. THE ONE THAT SELECTS FUTURE PARENTS AND THE ONE THAT SELECTS PARENTS FOR CROSSING THEM
     
-    Tecnicas de emparejamiento:
-    Los padres se pueden seleccionar de forma que se mantenga la diversidad de la poblacion 
+    Matching Techniques:
+    Parents can be selected in a way that maintains population diversity.
     
-    1) Prohibicion de cruce basada en ascendencia. Un individuo no puede emparejarse con el mismo, ni con sus padres, ni con sus hijos, ni con sus hermanos
+    1) **Prohibition of Crossbreeding Based on Ancestry**. An individual cannot mate with themselves, their parents, their children, or their siblings.
     
-    2) Prohibicion de incesto. Dos padres se cruzan si su distancia Hamming esta por encima de cierto umbral
+    2) **Incest Prohibition**. Two parents mate if their Hamming distance is above a certain threshold.
     
-    3) Emparejamiento variado. Un individuo se cruza con otro que es bastante diferente. Distancia de Hamming
+    3) **Diverse Pairing**. An individual mates with another that is quite different. Hamming distance.
     
-    LA QUE SELECCIONA UNA NUEVA GENERACIÓN
+    THE ONE THAT SELECTS A NEW GENERATION
     
     1) Random Selection (RS)
     
-    2) Tournament Selection (TS): escoge al individuo de mejor
-    fitness de entre N individuos seleccionados aleatoriamente (N = 2, 3, . . . )
-    La seleccion por torneo, constituye un procedimiento de seleccion de padres muy extendido y en el cual 
-    la idea consiste en escoger al azar un numero de individuos de la poblacion, taman~o del torneo, 
-    (con o sin reemplazamiento), seleccionar el mejor individuo de este grupo, y repetir el proceso hasta que 
-    el numero de individuos seleccionados coincida con el taman~o de la poblacion. Habitualmente el 
-    taman~o del torneo es 2, y en tal caso se ha utilizado una version probabilistica en la cual se permite 
-    la seleccion de individuos sin que necesariamente sean los mejores.
+    2) **Tournament Selection (TS)**: It chooses the individual with the best fitness from
+    among N individuals selected randomly (N = 2, 3, . . . ) Tournament selection is a widely used
+    parent selection procedure in which the idea is to randomly choose a number of individuals from
+    the population, tournament size, (with or without replacement), select the best individual from
+    this group, and repeat the process until the number of selected individuals matches the population size.
+    Usually, the tournament size is 2, and in such a case, a probabilistic version has been used
+    in which the selection of individuals is allowed without them necessarily being the best.
 
-    3) Linear Rank Selection (LRS): la poblacion se ordena en funcion de su fitness 
-    y se asocia una probabilidad de seleccion a cada individuo que depende de su orden
+    3) **Linear Rank Selection (LRS)**: The population is ranked based on its fitness, and a selection probability
+    is associated with each individual that depends on their order.
     
-    4) Seleccion por Ruleta (Roulette Selection, RS): asigna una probabilidad de seleccion proporcional al valor del fitness del individuo
-    Baker (1987) introduce un metodo denominado muestreo universal estocastico, el cual utiliza un unico giro 
-    de la ruleta siendo los sectores circulares proporcionales a la funcion objetivo. Los individuos son 
-    seleccionados a partir de marcadores, igualmente espaciados y con comienzo aleatorio. (algoritmos geneticos.pdf)
+    4) **Roulette Selection (RS)**: Assigns a selection probability proportional to the individual's fitness value.
+    Baker (1987) introduces a method called stochastic universal sampling, which uses a single spin of the
+    roulette wheel with circular sectors proportional to the objective function.
+    Individuals are selected from markers, equally spaced and with random starting points.
     
-    5) Elitista: En el modelo de seleccion elitista se fuerza a que el mejor individuo de la poblacion 
-    en el tiempo t, sea seleccionado como padre.
+    5) **Elitist**: In the elitist selection model, the best individual in the population at
+    time t is forced to be selected as a parent.
     
     Parameters
     ----------
