@@ -539,17 +539,17 @@ The `docstring` associated to the `_crossover` function is the following.
     Matching Techniques:
     Parents can be selected in a way that maintains population diversity.
     
-    1) **Prohibition of Crossbreeding Based on Ancestry**. An individual cannot mate with themselves, their parents, their children, or their siblings.
+    1) Prohibition of Crossbreeding Based on Ancestry. An individual cannot mate with themselves, their parents, their children, or their siblings.
     
-    2) **Incest Prohibition**. Two parents mate if their Hamming distance is above a certain threshold.
+    2) Incest Prohibition. Two parents mate if their Hamming distance is above a certain threshold.
     
-    3) **Diverse Pairing**. An individual mates with another that is quite different. Hamming distance.
+    3) Diverse Pairing. An individual mates with another that is quite different. Hamming distance.
     
     THE ONE THAT SELECTS A NEW GENERATION
     
     1) Random Selection (RS)
     
-    2) **Tournament Selection (TS)**: It chooses the individual with the best fitness from
+    2) Tournament Selection (TS): It chooses the individual with the best fitness from
     among N individuals selected randomly (N = 2, 3, . . . ) Tournament selection is a widely used
     parent selection procedure in which the idea is to randomly choose a number of individuals from
     the population, tournament size, (with or without replacement), select the best individual from
@@ -557,15 +557,15 @@ The `docstring` associated to the `_crossover` function is the following.
     Usually, the tournament size is 2, and in such a case, a probabilistic version has been used
     in which the selection of individuals is allowed without them necessarily being the best.
 
-    3) **Linear Rank Selection (LRS)**: The population is ranked based on its fitness, and a selection probability
+    3) Linear Rank Selection (LRS): The population is ranked based on its fitness, and a selection probability
     is associated with each individual that depends on their order.
     
-    4) **Roulette Selection (RS)**: Assigns a selection probability proportional to the individual's fitness value.
+    4) Roulette Selection (RS): Assigns a selection probability proportional to the individual's fitness value.
     Baker (1987) introduces a method called stochastic universal sampling, which uses a single spin of the
     roulette wheel with circular sectors proportional to the objective function.
     Individuals are selected from markers, equally spaced and with random starting points.
     
-    5) **Elitist**: In the elitist selection model, the best individual in the population at
+    5) Elitist: In the elitist selection model, the best individual in the population at
     time t is forced to be selected as a parent.
     
     Parameters
