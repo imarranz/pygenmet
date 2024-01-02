@@ -62,6 +62,9 @@ Genetic Algorithms are a very useful tool to solve optimization problems but the
 
 ![png](figures/translational_strategy.png)
 **FIGURE**: Genetic Algorithms Applied to Translational Strategy in NASH. Learning from Mouse Models. Poster presented in the II Jornadas Doctorales de la UPV/EHU 2019.
+
+![png](figures/genetic_algorithms_reveal_potential.png)
+**FIGURE**: Genetic Algorithms Reveal Potential to Stratify MASLD Heterogeneity. Poster presented in the Liver Meeting, Boston Nov. 10-14, 2023.
             
 ## CLASS `chromosome`
 
