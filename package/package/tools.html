@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ibon Martínez-Arranz">
+  <link rel="canonical" href="https://github.com/imarranz/pygenmet/package/package/tools.html">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Tools - PyGenMet</title>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tools";
+    var mkdocs_page_input_path = "package/package/tools.md";
+    var mkdocs_page_url = "/imarranz/pygenmet/package/package/tools.html";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> PyGenMet</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PyGenMet</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="class.html">Class</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="fitness.html">Fitness</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="tools.html">Tools</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Publications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/publications.html">Publications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/congress_conferences_seminars.html">Congress & Conferences</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/metabolomics_subtypes.html">Metabolomics Subtypes</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">PyGenMet</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>PyGenMet &raquo;</li>
+        
+      
+    
+    <li>Tools</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/imarranz/pygenmet/edit/master/docs/package/package/tools.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="operators.html" class="btn btn-neutral" title="Operators"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">#</a></h1>
+<p>Import the <code>pygenmet</code> package</p>
+<pre><code class="language-python">from pygenmet import *
+</code></pre>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+</code></pre>
+<h2 id="tools_get_father">tools._get_father<a class="headerlink" href="#tools_get_father" title="Permanent link">#</a></h2>
+<p>With the function <code>\_get\_father()</code> we can to generate an initial solution. We can to initializate <code>nwt</code>, <code>dwt</code>, <code>nko</code> and <code>dko</code>. For replicate purpose, this function has the <em>random_state</em> argument.</p>
+<p>The <code>docstring</code> associated to the <code>_get_father</code> function is the following.</p>
+<pre><code class="language-python">?_get_father
+</code></pre>
+<pre><code class="language-bash">Parameters
+----------
+nwt : Number of observations of Wild Type
+nko : Number of observations of Knock-out
+dwt : Data of observations of Wild Type
+dko : Data of observations of Knock-out
+geneSet: Usually a list as '01'
+get_fitness: The fitness function to use
+obj : Array of fold-changes of metabolites in murine model
+random_state: If you don't mention the random_state in the code, then whenever you execute your code a new random value
+
+Returns
+-------
+This function returns a chromosome
+
+Examples
+--------
+&gt;&gt;&gt; _get_father(nwt = nwt, nko = nko, dwt = dwt, dko = dko, geneSet = '01', get_fitness = _get_fitness, obj = FC.FC).print()
+011101101010000 ... 000000001000001 || 101110011001010 ... 011110110000011    37     261    -0.04568152517704738
+
+&gt;&gt;&gt; _get_father(nwt = nwt, nko = nko, dwt = dwt, dko = dko, geneSet = '01', get_fitness = _get_fitness, obj = FC.FC).print()
+000101011001011 ... 101100010101101 || 010000101000100 ... 110111010001010    46     252    -0.07192848665245967
+
+&gt;&gt;&gt; _get_father(nwt = nwt, nko = nko, dwt = dwt, dko = dko, geneSet = '01', get_fitness = _get_fitness, obj = FC.FC).print()
+110101100111011 ... 000110110110111 || 110010000110100 ... 110010011101011    49     267    -0.11718322152992591
+</code></pre>
+<pre><code class="language-python">nwt = 15
+nko = 25
+dwt = pd.DataFrame(np.random.rand(nwt,10))
+dko = pd.DataFrame(np.random.rand(nko,10))
+
+for i in np.arange(10):
+    A = _get_father(nwt = nwt, nko = nko, dwt = dwt, dko = dko, 
+                    geneSet = '01', get_fitness = _get_fitness, 
+                    obj = [1,0,1,-1,1,0,0,1,0.5, 0.5])
+
+    A.print()
+</code></pre>
+<pre><code class="language-bash">000100010101011 ... 000100010101011 || 010011110000011 ... 000110111000101     6      12    -0.01750455939922404
+010100000111001 ... 010100000111001 || 000111111010001 ... 100010010110110     6      13    0.01583165234542458
+001010100111101 ... 001010100111101 || 101110011011111 ... 111110100001101     8      15    0.1337101625593648
+011011101001110 ... 011011101001110 || 011111111111101 ... 111010000110111     9      18    0.3326538149497444
+101100111001001 ... 101100111001001 || 010100110110000 ... 100001010110001     8      11    0.09708129202192302
+010001010010001 ... 010001010010001 || 100111000100111 ... 001110100100100     5      11    0.1442876222067664
+000000000011101 ... 000000000011101 || 100100011111100 ... 111000011110101     4      14    0.28826914052937097
+110100111110100 ... 110100111110100 || 111011001010111 ... 101111010101001     9      15    -0.377007167796123
+100111000110010 ... 100111000110010 || 111001110110000 ... 100001101111100     7      15    0.3216335311818925
+000111101101000 ... 000111101101000 || 100010011101100 ... 011001100001110     7      12    -0.09813075927314555
+</code></pre>
+<pre><code class="language-python">for i in np.arange(10):
+    A = _get_father(nwt = nwt, nko = nko, dwt = dwt, dko = dko, 
+                    geneSet = '01', get_fitness = _get_fitness, 
+                    obj = [1,0,1,-1,1,0,0,1,0.5, 0.5], 
+                    random_state = 42)
+
+    A.print()
+</code></pre>
+<pre><code class="language-bash">100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+100011100001001 ... 100011100001001 || 101101100100011 ... 000111111011111     6      17    0.04061614908467767
+</code></pre>
+<h2 id="tools_get_population">tools._get_population<a class="headerlink" href="#tools_get_population" title="Permanent link">#</a></h2>
+<p>The <code>docstring</code> associated to the <code>_get_population</code> function is the following.</p>
+<pre><code class="language-python">?_get_population
+</code></pre>
+<pre><code class="language-bash">Parameters
+----------
+individuals : Number of individual of first generation or initial population
+nwt : Number of observations of Wild Type
+nko : Number of observations of Knock-out
+dwt : Data of observations of Wild Type
+dko : Data of observations of Knock-out
+geneSet : Usually a list as '01'
+get_fitness : The fitness function to use
+obj : Array of fold-changes of metabolites in murine model
+random_state : If you don't mention the random_state in the code, then whenever you execute your code a new random value
+
+Returns
+-------
+population_ : A list of the initial population (chromosomes) to initialize the algorithm
+
+Notes
+-----
+
+Examples
+--------
+&gt;&gt;&gt; nwt = 15
+&gt;&gt;&gt; nko = 25
+&gt;&gt;&gt; dwt = pd.DataFrame(np.random.rand(nwt,10))
+&gt;&gt;&gt; dko = pd.DataFrame(np.random.rand(nko,10))
+&gt;&gt;&gt; A = _get_population(individuals = 10,
+                        nwt = nwt, nko = nko, dwt = dwt, dko = dko,
+                        geneSet = '01', get_fitness = _get_fitness, obj = [1,0,1,-1,1,0,0,1,0.5, 0.5])
+
+&gt;&gt;&gt; [A_.print() for A_ in A];
+110101101011111 ... 110101101011111 || 101110000011110 ... 111101111110101    11      16    0.27010320047631353
+110001101000111 ... 110001101000111 || 111011001000100 ... 001001100010011     8      12    0.4153593539526977
+110110110000111 ... 110110110000111 || 111001000001001 ... 010011110110101     9      13    0.24120026823063395
+001001101100010 ... 001001101100010 || 101000001100111 ... 001110111010010     6      12    0.5976992970173265
+110110101000111 ... 110110101000111 || 100011000000110 ... 001100011111011     9      12    0.4327563879291974
+010110111011011 ... 010110111011011 || 101101110101111 ... 011110010010000    10      13    0.19109063637942147
+011011111001110 ... 011011111001110 || 000001110011000 ... 110001111010111    10      13    0.19291545113399683
+100010011100001 ... 100010011100001 || 011101010010100 ... 101001111100011     6      14    0.3838922708272582
+110001111111010 ... 110001111111010 || 110111010001010 ... 010100000000100    10       9    0.04833875255418793
+001111011101100 ... 001111011101100 || 100011000100101 ... 001010101000110     9      10    0.6180057110908423
+</code></pre>
+<pre><code class="language-python">nwt = 15
+nko = 25
+dwt = pd.DataFrame(np.random.rand(nwt,10))
+dko = pd.DataFrame(np.random.rand(nko,10))
+A = _get_population(individuals = 10, 
+                    nwt = nwt, nko = nko, dwt = dwt, dko = dko, 
+                    geneSet = '01', get_fitness = _get_fitness, 
+                    obj = [1,0,1,-1,1,0,0,1,0.5, 0.5])
+
+[A_.print() for A_ in A];
+</code></pre>
+<pre><code class="language-bash">001100101100011 ... 001100101100011 || 010111011100111 ... 001111010101001     7      15    0.22717953288324988
+011111001110011 ... 011111001110011 || 110011011010001 ... 100011100110100    10      13    -0.14158703160537597
+000111000110010 ... 000111000110010 || 000111011011101 ... 111010101101111     6      16    -0.14752436179984593
+111110011001001 ... 111110011001001 || 111101011001011 ... 010111111010101     9      17    0.37230832910925965
+111100011100110 ... 111100011100110 || 001000100111010 ... 110100000100011     9       9    0.09942842284405343
+011100001011101 ... 011100001011101 || 001010010010100 ... 101000010010000     8       7    -0.29440398210415947
+111011011011101 ... 111011011011101 || 000101001001101 ... 011011010111110    11      13    0.262667504755609
+000000010010100 ... 000000010010100 || 111110001111110 ... 111101010010111     3      17    -0.3603100204852186
+111110110010001 ... 111110110010001 || 100101000011100 ... 111000110100010     9      10    -0.254079327688995
+001010010000000 ... 001010010000000 || 100111101001111 ... 011111000011110     3      15    0.3651577081778396
+</code></pre>
+<h2 id="tools_read_chromosome">tools._read_chromosome<a class="headerlink" href="#tools_read_chromosome" title="Permanent link">#</a></h2>
+<p>This function read the chromosome information from a file and it is loaded in memory. The file can be generated by <code>to_json()</code> method.</p>
+<p>The <code>docstring</code> associated to the <code>_read_chromosome</code> function is the following.</p>
+<pre><code class="language-python">?_read_chromosome
+</code></pre>
+<pre><code class="language-bash">Parameters
+----------
+path_or_buf :  string or file handle. File path or object.
+
+Returns
+-------
+This function returns a chromosome
+
+Examples
+--------
+&gt;&gt;&gt; A = chromosome(genes = '00100101001001011000111010110010', nko=16, nwt=16, fitness=0.98)
+&gt;&gt;&gt; A.print(5)
+00100 ... 00101 || 10001 ... 10010     6       8               0.98
+&gt;&gt;&gt; A.to_json('prueba.json')
+&gt;&gt;&gt; B = _read_chromosome('prueba.json')
+&gt;&gt;&gt; B.print(10)
+0010010100 ... 0100100101 || 1000111010 ... 1010110010         6       8               0.98
+</code></pre>
+<pre><code class="language-python">new_CH = _read_chromosome(path_or_buf = 'out.json')
+new_CH.print()
+</code></pre>
+<pre><code class="language-bash">0110101101 ... 0110101101 || 011000111101101 ... 011010110001111       6      18             0.4125
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><b>PyGenMet</b> <br>Copyright &#169; 2024 <a href="https://github.com/imarranz">Ibon Martínez-Arranz</a><br></p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/imarranz/pygenmet/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="operators.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="examples.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

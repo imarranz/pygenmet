@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ibon Martínez-Arranz">
+  <link rel="canonical" href="https://github.com/imarranz/pygenmet/package/package/fitness.html">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Fitness - PyGenMet</title>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Fitness";
+    var mkdocs_page_input_path = "package/package/fitness.md";
+    var mkdocs_page_url = "/imarranz/pygenmet/package/package/fitness.html";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> PyGenMet</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PyGenMet</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="class.html">Class</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="fitness.html">Fitness</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="operators.html">Operators</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Publications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/publications.html">Publications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/congress_conferences_seminars.html">Congress & Conferences</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/metabolomics_subtypes.html">Metabolomics Subtypes</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">PyGenMet</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>PyGenMet &raquo;</li>
+        
+      
+    
+    <li>Fitness</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/imarranz/pygenmet/edit/master/docs/package/package/fitness.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+        <a href="operators.html" class="btn btn-neutral float-right" title="Operators">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="class.html" class="btn btn-neutral" title="Class"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="fitness">Fitness<a class="headerlink" href="#fitness" title="Permanent link">#</a></h1>
+<p>Import the <code>pygenmet</code> package</p>
+<pre><code class="language-python">from pygenmet import *
+</code></pre>
+<p>Currently, three fully customizable fitness functions are developed in <code>pygenmet</code> package:</p>
+<ul>
+<li>_get_fitness</li>
+<li>_get_fitness_robust</li>
+<li>_get_fitness_l</li>
+</ul>
+<h2 id="fitness_get_fitness">fitness._get_fitness<a class="headerlink" href="#fitness_get_fitness" title="Permanent link">#</a></h2>
+<p>The <code>docstring</code> associated to the <code>_get_fitness</code> function is the following.</p>
+<pre><code class="language-python">?_get_fitness
+</code></pre>
+<pre><code>Parameters
+----------
+genes : Genes of a chromosome
+nwt : Number of observations of Wild Type
+nko : Number of observations of Knock-out
+dwt : Data of observations of Wild Type
+dko : Data of observations of Knock-out
+obj : Array of fold-changes of metabolites in murine model
+l : float Usually 0.5 / length(fc1). If length(fc1) = 50 then l = 0.01
+
+Returns
+-------
+p : float
+    The aptitude of a genes of a chromosome (solution) is the correlation between fc1 and fc2. 
+    Initially the aptitude (fitness) of a chromosome is the Pearson Correlation between the 
+    fold-change of Knock-out select samples and Wild Type selected samples with the fold-change
+    of the murine model analyzed (a vector of ¿50? fold-changes).
+
+Notes
+-----
+This function evaluates the Pearson Correlation 
+between fc1 and fc2 with a penalty for different sign 
+in the values. This function uses pearsonr from scipy and
+sign from numpy to evaluate the aptitude.
+
+The penalty has been named l.
+
+Examples
+--------
+</code></pre>
+<h2 id="fitness_get_fitness_robust">fitness._get_fitness_robust<a class="headerlink" href="#fitness_get_fitness_robust" title="Permanent link">#</a></h2>
+<p>The <code>docstring</code> associated to the <code>_get_fitness_robust</code> function is the following.</p>
+<pre><code class="language-python">?_get_fitness_robust
+</code></pre>
+<pre><code>Parameters
+----------
+genes : Genes of a chromosome
+nwt : Number of observations of Wild Type
+nko : Number of observations of Knock-out
+dwt : Data of observations of Wild Type
+dko : Data of observations of Knock-out
+obj : Array of fold-changes of metabolites in murine model
+l : float Usually 0.5 / length(fc1). If length(fc1) = 50 then l = 0.01
+
+Returns
+-------
+p : float
+    The aptitude of a genes of a chromosome (solution) is the correlation between fc1 and fc2. 
+    Initially the aptitude (fitness) of a chromosome is the Pearson Correlation between the 
+    fold-change of Knock-out select samples and Wild Type selected samples with the fold-change
+    of the murine model analyzed (a vector of ¿50? fold-changes).
+
+Notes
+-----
+This function evaluates the Pearson Correlation 
+between fc1 and fc2 with a penalty for different sign 
+in the values. This function uses pearsonr from scipy and
+sign from numpy to evaluate the aptitude.
+
+The penalty has been named l.
+
+Examples
+--------
+</code></pre>
+<h2 id="fitness_get_fitness_l">fitness._get_fitness_l<a class="headerlink" href="#fitness_get_fitness_l" title="Permanent link">#</a></h2>
+<p>The <code>docstring</code> associated to the <code>_get_fitness_l</code> function is the following.</p>
+<pre><code class="language-python">?_get_fitness_l
+</code></pre>
+<pre><code>Parameters
+----------
+genes : Genes of a chromosome
+nwt : Number of observations of Wild Type
+nko : Number of observations of Knock-out
+dwt : Data of observations of Wild Type
+dko : Data of observations of Knock-out
+obj : Array of fold-changes of metabolites in murine model
+
+Returns
+-------
+p : float
+    The aptitude of a genes of a chromosome (solution) is the correlation between fc1 and fc2. 
+    Initially the aptitude (fitness) of a chromosome is the Pearson Correlation between the 
+    fold-change of Knock-out select samples and Wild Type selected samples with the fold-change
+    of the murine model analyzed (a vector of ¿50? fold-changes).
+
+Notes
+-----
+This function evaluates the Pearson Correlation 
+between fc1 and fc2 with a penalty for different sign 
+in the values. This function uses pearsonr from scipy and
+sign from numpy to evaluate the aptitude.
+
+The penalty has been named l.
+
+Examples
+--------
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><b>PyGenMet</b> <br>Copyright &#169; 2024 <a href="https://github.com/imarranz">Ibon Martínez-Arranz</a><br></p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/imarranz/pygenmet/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="class.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="operators.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

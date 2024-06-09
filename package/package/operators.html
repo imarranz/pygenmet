@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ibon Martínez-Arranz">
+  <link rel="canonical" href="https://github.com/imarranz/pygenmet/package/package/operators.html">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Operators - PyGenMet</title>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Operators";
+    var mkdocs_page_input_path = "package/package/operators.md";
+    var mkdocs_page_url = "/imarranz/pygenmet/package/package/operators.html";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> PyGenMet</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../index.html">Introduction</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PyGenMet</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="class.html">Class</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="fitness.html">Fitness</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="operators.html">Operators</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Publications</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/publications.html">Publications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/congress_conferences_seminars.html">Congress & Conferences</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../publications/metabolomics_subtypes.html">Metabolomics Subtypes</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">PyGenMet</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>PyGenMet &raquo;</li>
+        
+      
+    
+    <li>Operators</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/imarranz/pygenmet/edit/master/docs/package/package/operators.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+        <a href="tools.html" class="btn btn-neutral float-right" title="Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="fitness.html" class="btn btn-neutral" title="Fitness"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">#</a></h1>
+<p>Import the <code>pygenmet</code> package</p>
+<pre><code class="language-python">from ..tools.tools import chromosome
+</code></pre>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+</code></pre>
+<h2 id="crossover">Crossover<a class="headerlink" href="#crossover" title="Permanent link">#</a></h2>
+<p>In Genetic Algorithms the crossover (also called recombination) is a genetic operator used to combine the genetic information of two parents to generate new offspring.</p>
+<h3 id="operators_crossover">operators._crossover<a class="headerlink" href="#operators_crossover" title="Permanent link">#</a></h3>
+<p>The <code>docstring</code> associated to the <code>_crossover</code> function is the following.</p>
+<pre><code class="language-python">?_crossover
+</code></pre>
+<pre><code>Parameters
+----------
+chromosome_a: Chromosome
+chromosome_b: Chromosome
+k: k-point. If k = 1 the method will be single-point crossover, 
+            If k = 2 the method will be two-point crossover. 
+            If k = N (with N the length of chromosome) the method will be the uniform crossover. Its value is 1 by default.
+
+Returns
+-------
+Two new chromosomes
+
+Notes
+-----
+[1]
+
+References
+----------
+[1] https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)
+
+Examples
+--------
+&gt;&gt;&gt; A = _get_father(nwt = dwt.shape[0], nko = dko.shape[0], 
+                    dwt = dwt, dko = dko,
+                    geneSet = '01', 
+                    get_fitness = _get_fitness, obj = np.array(FC.loc[:, murine_models_in[4]]))
+
+&gt;&gt;&gt; B = _get_father(nwt = dwt.shape[0], nko = dko.shape[0], 
+                    dwt = dwt, dko = dko,
+                    geneSet = '01', 
+                    get_fitness = _get_fitness, obj = np.array(FC.loc[:, murine_models_in[4]]))
+
+&gt;&gt;&gt; A.print()
+011000111111010 ... 001000010001110 || 001010011000110 ... 011001001111111    43     336    0.03363686825576087
+
+&gt;&gt;&gt; B.print()
+100101111101111 ... 010001000100101 || 010101001001010 ... 111010000101010    42     345    0.1410663212679354
+
+&gt;&gt;&gt; A1, B1 = _crossover(A, B, get_fitness = _get_fitness,  
+                    nwt = dwt.shape[0], nko = dko.shape[0], dwt = dwt, dko = dko, 
+                    obj = np.array(FC.loc[:, murine_models_in[4]]), k = 1)
+
+&gt;&gt;&gt; A1.print()
+011000111111010 ... 001000010001110 || 001010011000110 ... 111010000101010    43     327    0.007288743389698732
+
+&gt;&gt;&gt; B1.print()
+100101111101111 ... 010001000100101 || 010101001001010 ... 011001001111111    42     354    0.15370276754212897
+
+&gt;&gt;&gt; A1, B1 = _crossover(A, B, get_fitness = _get_fitness,  
+                    nwt = dwt.shape[0], nko = dko.shape[0], dwt = dwt, dko = dko, 
+                    obj = np.array(FC.loc[:, murine_models_in[4]]), k = 772)
+
+&gt;&gt;&gt; A1.print()
+110000111101111 ... 000000010001111 || 011111001001110 ... 011000001111111    43     355    0.017131591198246282
+
+&gt;&gt;&gt; B1.print()
+001101111111010 ... 011001000100100 || 000000011000010 ... 111011000101010    42     326    0.13633106854522628
+</code></pre>
+<h3 id="operators_arithmetic_crossover">operators._arithmetic_crossover<a class="headerlink" href="#operators_arithmetic_crossover" title="Permanent link">#</a></h3>
+<pre><code class="language-python">?_arithmetic_crossover
+</code></pre>
+<pre><code>Notes
+-----
+For this specific genotype (GeneSet = '01') the arithmetic crossover techniques are available.
+These techniques are:
+  [1] AND
+  [2] OR
+  [3] XOR
+Arithmetic crossover - some arithmetic operation is performed to make a new offspring [1]
+
+References
+----------
+[1] https://www.obitko.com/tutorials/genetic-algorithms/crossover-mutation.php
+</code></pre>
+<p>```{table} Truth table for AND, OR and XOR logical operators.
+:align: center
+:width: 80%
+:name: truth_table
+| A | B | AND | OR | XOR |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 0 |</p>
+<pre><code>
+## Mutation
+
+See {ref}`theory:mutation` for the theory and definitions.
+
+### operators.\_mutation
+
+```python
+?_mutation
+</code></pre>
+<pre><code>Parameters
+----------
+father : Genes of the father
+geneSet : Set of genes availables. Usually '0' and '1'
+get_fitness : Function to improve
+nwt : Number of No NAFLD Samples
+nko : Number of NAFLD Samples
+dwt : Data of No NAFLD Samples
+dko : Data of NAFLD Samples
+obj : The fold-changes of murine model to adjust
+type : Type of mutation process, 'bsm' by default. Five types are allowed.
+       bf : bitflip
+       bsm : bitstringmutation
+       sw : swap
+       in : inversion
+       sc : scramble
+p : Parameter to modify the posibility of change in a genes
+
+Returns
+-------
+A new mutated chromosome by the type of mutation process
+
+Notes
+-----
+The flipbit (fb) mutation is an aggressive mutation because change all genes. 
+If in a specific gen the allelo value is '0' this process will change it to '1'.
+
+fb: '0101010101' -&gt; '1010101010'
+
+The bitstringmutation (bsm) mutation process will change a gen with a 
+probability 'p'. If p = None then p = 1/len(genes) [1].
+
+bsm: '0101010101' -&gt; '0101110101'
+
+References
+----------
+
+[1] https://en.wikipedia.org/wiki/Mutation_(genetic_algorithm)
+[2] https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_mutation.htm
+
+Examples
+--------
+</code></pre>
+<h2 id="selection">Selection<a class="headerlink" href="#selection" title="Permanent link">#</a></h2>
+<h3 id="operators_replacement">operators._replacement<a class="headerlink" href="#operators_replacement" title="Permanent link">#</a></h3>
+<pre><code class="language-python">?_replacement
+</code></pre>
+<pre><code>Parameters
+----------
+type : Type of replacement
+       rws : Replace Worst Strategy
+       rts : Restricted Tournament Selection
+       wams : Worst Among Most Similar Replacement
+
+
+Notes
+-----    
+The _replacement function is ised to change the old generation population with the new generation. 
+Four process have been evaluated [1]:
+
+1) Replace Worst Strategy (RW). The worst element of the population is replaced if the child improves it.
+   It offers high selective pressure, even when its parents are chosen randomly.
+
+2) Restricted Tournament Selection (RTS) [2].
+
+3) Replace the Worst Among Most Similar Replacement (WAMS) [3]. the worst chromosome of the
+   set of the N (N = 3,...) parents most similar to the offspring.
+
+4) Deterministic Crowding Algorithm (Deterministic Crowding, DC) [4]. To facilitate the comparison we will use in our experiments. A variant of the DC in which a single descendant will be generated for each cross, which will replace the most     
+   similar parent if it improves it.
+
+References
+----------
+[1] https://sci2s.ugr.es/keel/pdf/keel/congreso/4-diversidadfinal2_daniel_molina.pdf
+[2] G.   Harik.   Finding   multimodal   solutions   using restricted  tournament  selection. Proc.  6th  Int.  Conf. Genetic Algorithms, páginas 24-31, 1995.
+[3] W. Cedeño and V. Vemuri. Multi-niche crowding in genetic algorithms and its application to the assembly of dna restriction-fragments. Evolutionary Computation, 2(4):321-345, 1995.    
+[4] S.W. Mahfoud. Crowding and preselection revised. Parallel Problem Solving from Nature 2, páginas 27-36, 1992.
+</code></pre>
+<h3 id="operators_selection">operators._selection<a class="headerlink" href="#operators_selection" title="Permanent link">#</a></h3>
+<pre><code class="language-python">?_selection
+</code></pre>
+<pre><code>THERE ARE TWO TYPES OF SELECTION. THE ONE THAT SELECTS FUTURE PARENTS AND SELECTS THEM PARENTS TO CROSS THEM
+
+Matching techniques:
+Parents can be selected in a way that maintains the diversity of the population
+
+1) Prohibition of crossing based on ancestry. An individual cannot mate with himself, nor with his parents, nor with his children, nor with his siblings.
+
+2) Prohibition of incest. Two parents intersect if their Hamming distance is above a certain threshold
+
+3) Varied pairing. One individual crosses paths with another who is quite different. Hamming distance
+
+THE ONE THAT SELECTS A NEW GENERATION
+
+1) Random Selection (RS)
+
+2) Tournament Selection (TS): choose the best individual
+fitness among N randomly selected individuals (N = 2, 3,...)
+The selection by tournament, constitutes a very extended selection procedure of parents and in which
+The idea is to randomly pick a number of individuals from the population, size of the tournament,
+(with or without replacement), select the best individual from this group, and repeat the process until
+the number of individuals selected matches the size of the population. Usually the
+tournament size is 2, and in this case a probabilistic version has been used in which it is allowed
+the selection of individuals without necessarily being the best.
+
+3) Linear Rank Selection (LRS): the population is ordered according to its fitness
+and a selection probability is associated with each individual that depends on their order
+
+4) Selection by Roulette (Roulette Selection, RS): assigns a selection probability proportional to the fitness value of the individual
+Baker (1987) introduces a method called universal stochastic sampling, which uses a single turn
+of the roulette being the circular sectors proportional to the objective function. The individuals are
+selected from markers, equally spaced and with a random start. (genetic algorithms.pdf)
+
+5) Elitist: In the elitist selection model, the best individual in the population is forced to
+at time t, be selected as the parent.
+
+Parameters
+----------
+chromosomes : List of chromosomes of the population
+size : Number of individuals to select from the population. This parameter is not considered with method = 'elitist'.
+N : Number of Genes to print (if trace is True)
+trace : Should be the chromosomes and the selection printed on the screen
+method: The method used for selection: ['random', 'tournament', 'linear', 'roulette', 'elitist']
+
+Returns
+-------
+fitness : The fitness of each chromosome (individual)
+psel : Probabilities of selecction of each chromosome. pesl(x) = f(x) / sum(f(y)), for each x in y
+selecction : List of selected chromosomes
+
+Notes
+-----
+The aim of this function is to evaluate the fitness of each population (by the chromosome structure) and 
+to asign a probability to select for a new population (next generation).
+
+Examples
+--------
+&gt;&gt;&gt; A_ = []
+&gt;&gt;&gt; A_.append(chromosome(genes = '01010001010110100100', nwt = 10, nko = 10, fitness = 2.3454))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01011011110110100100', nwt = 10, nko = 10, fitness = 1.4401))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01010001010100000100', nwt = 10, nko = 10, fitness = 0.9254))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01110101010110100100', nwt = 10, nko = 10, fitness = 7.1104))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01010101110111100100', nwt = 10, nko = 10, fitness = 2.1494))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01010001110000100100', nwt = 10, nko = 10, fitness = 1.9954))
+&gt;&gt;&gt; A_.append(chromosome(genes = '00000000010110100100', nwt = 10, nko = 10, fitness = 1.7323))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01010000111110100111', nwt = 10, nko = 10, fitness = 1.5002))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01110011010110100111', nwt = 10, nko = 10, fitness = 2.4119))
+&gt;&gt;&gt; A_.append(chromosome(genes = '01010011011110101100', nwt = 10, nko = 10, fitness = 2.1414))
+
+&gt;&gt;&gt; selection, fit, ps, sel_mean, sel_maximun = _selection(A_, size = 4, N = 8, trace = True, method = 'roulette')
+
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01010001...01000101 || 01101001...10100100         4        4           2.3454       0.09912204
+01011011...01101111 || 01101001...10100100         7        4           1.4401       0.07244166
+01010001...01000101 || 01000001...00000100         4        2           0.9254       0.05727278
+01110101...11010101 || 01101001...10100100         6        4           7.1104       0.23955286
+01010101...01010111 || 01111001...11100100         6        5           2.1494       0.09334567
+01010001...01000111 || 00001001...00100100         5        2           1.9954       0.08880708
+00000000...00000001 || 01101001...10100100         1        4           1.7323       0.08105318
+01010000...01000011 || 11101001...10100111         4        7           1.5002       0.07421289
+01110011...11001101 || 01101001...10100111         6        6           2.4119       0.10108189
+01010011...01001101 || 11101011...10101100         5        6           2.1414       0.09310990
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01110101...11010101 || 01101001...10100100         6        4           7.1104       0.23955286
+01010001...01000101 || 01101001...10100100         4        4           2.3454       0.09912204
+01010001...01000111 || 00001001...00100100         5        2           1.9954       0.08880708
+01010011...01001101 || 11101011...10101100         5        6           2.1414       0.09310990
+
+&gt;&gt;&gt; selection, fit, ps, sel_mean, sel_maximun = _selection(A_, size = 4, N = 8, trace = True, method = 'linear')
+
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01010001...01000101 || 01101001...10100100         4        4           2.3454       0.15555555
+01011011...01101111 || 01101001...10100100         7        4           1.4401       0.02222222
+01010001...01000101 || 01000001...00000100         4        2           0.9254              0.0
+01110101...11010101 || 01101001...10100100         6        4           7.1104              0.2
+01010101...01010111 || 01111001...11100100         6        5           2.1494       0.13333333
+01010001...01000111 || 00001001...00100100         5        2           1.9954       0.08888888
+00000000...00000001 || 01101001...10100100         1        4           1.7323       0.06666666
+01010000...01000011 || 11101001...10100111         4        7           1.5002       0.04444444
+01110011...11001101 || 01101001...10100111         6        6           2.4119       0.17777777
+01010011...01001101 || 11101011...10101100         5        6           2.1414       0.11111111
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01011011...01101111 || 01101001...10100100         7        4           1.4401       0.02222222
+01010000...01000011 || 11101001...10100111         4        7           1.5002       0.04444444
+01110101...11010101 || 01101001...10100100         6        4           7.1104              0.2
+01010001...01000101 || 01101001...10100100         4        4           2.3454       0.15555555
+
+&gt;&gt;&gt; selection, fit, ps, sel_mean, sel_maximun = _selection(A_, size = 4, N = 8, trace = True, method = 'random')
+
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01010001...01000101 || 01101001...10100100         4        4           2.3454              0.1
+01011011...01101111 || 01101001...10100100         7        4           1.4401              0.1
+01010001...01000101 || 01000001...00000100         4        2           0.9254              0.1
+01110101...11010101 || 01101001...10100100         6        4           7.1104              0.1
+01010101...01010111 || 01111001...11100100         6        5           2.1494              0.1
+01010001...01000111 || 00001001...00100100         5        2           1.9954              0.1
+00000000...00000001 || 01101001...10100100         1        4           1.7323              0.1
+01010000...01000011 || 11101001...10100111         4        7           1.5002              0.1
+01110011...11001101 || 01101001...10100111         6        6           2.4119              0.1
+01010011...01001101 || 11101011...10101100         5        6           2.1414              0.1
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01010101...01010111 || 01111001...11100100         6        5           2.1494              0.1
+01010001...01000101 || 01000001...00000100         4        2           0.9254              0.1
+01010011...01001101 || 11101011...10101100         5        6           2.1414              0.1
+01010001...01000101 || 01101001...10100100         4        4           2.3454              0.1
+
+&gt;&gt;&gt; selection, fit, ps, sel_mean, sel_maximun = _selection(A_, size = 4, N = 8, trace = True, method = 'elitist')
+
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01010001...01000101 || 01101001...10100100         4        4           2.3454       ----------
+01011011...01101111 || 01101001...10100100         7        4           1.4401       ----------
+01010001...01000101 || 01000001...00000100         4        2           0.9254       ----------
+01110101...11010101 || 01101001...10100100         6        4           7.1104       ----------
+01010101...01010111 || 01111001...11100100         6        5           2.1494       ----------
+01010001...01000111 || 00001001...00100100         5        2           1.9954       ----------
+00000000...00000001 || 01101001...10100100         1        4           1.7323       ----------
+01010000...01000011 || 11101001...10100111         4        7           1.5002       ----------
+01110011...11001101 || 01101001...10100111         6        6           2.4119       ----------
+01010011...01001101 || 11101011...10101100         5        6           2.1414       ----------
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01010101...01010111 || 01111001...11100100         6        5           2.1494       ----------
+01010001...01000101 || 01101001...10100100         4        4           2.3454       ----------
+01110011...11001101 || 01101001...10100111         6        6           2.4119       ----------
+01110101...11010101 || 01101001...10100100         6        4           7.1104       ----------
+
+&gt;&gt;&gt; selection, fit, ps, sel_mean, sel_maximun = _selection(A_, size = 4, N = 8, trace = True, method = 'tournament')
+
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+01010001...01000101 || 01101001...10100100         4        4           2.3454       ----------
+01011011...01101111 || 01101001...10100100         7        4           1.4401       ----------
+01010001...01000101 || 01000001...00000100         4        2           0.9254       ----------
+01110101...11010101 || 01101001...10100100         6        4           7.1104       ----------
+01010101...01010111 || 01111001...11100100         6        5           2.1494       ----------
+01010001...01000111 || 00001001...00100100         5        2           1.9954       ----------
+00000000...00000001 || 01101001...10100100         1        4           1.7323       ----------
+01010000...01000011 || 11101001...10100111         4        7           1.5002       ----------
+01110011...11001101 || 01101001...10100111         6        6           2.4119       ----------
+01010011...01001101 || 11101011...10101100         5        6           2.1414       ----------
+|---------------------------------------------------------------------------------------------|
+|-------------- fenotypes ---------------||--- genotypes ---||--- fitness ---||- Probability -|
+00000000...00000001 || 01101001...10100100         1        4           1.7323       ----------
+01010000...01000011 || 11101001...10100111         4        7           1.5002       ----------
+01110011...11001101 || 01101001...10100111         6        6           2.4119       ----------
+01010101...01010111 || 01111001...11100100         6        5           2.1494       ----------
+01110101...11010101 || 01101001...10100100         6        4           7.1104       ----------
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><b>PyGenMet</b> <br>Copyright &#169; 2024 <a href="https://github.com/imarranz">Ibon Martínez-Arranz</a><br></p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/imarranz/pygenmet/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="fitness.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="tools.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
