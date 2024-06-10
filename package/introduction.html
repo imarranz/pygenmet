@@ -120,53 +120,51 @@
           <div role="main">
             <div class="section">
               
-                <p><img alt="" src="figures/logo.png" /></p>
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h1>
+                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h1>
 <p>Nonalcoholic fatty liver disease (NAFLD) is a consequence of defects in diverse metabolic pathways or nutritional effects that involve a hepatic accumulation of triglycerides {cite}<code>barr_obesity-dependent_2012</code>. Features of these deviations might determine whether NAFLD progresses to nonalcoholic steatohepatitis (NASH). We investigated whether the diverse defects observed in patients with NAFLD are due to different NAFLD subtypes with specific serum metabolomic profiles and whether these can distinguish patients with NASH from patients with simple steatosis {cite}<code>martinez-arranz_metabolomicbased_2018</code>.</p>
 <p>We collected liver and serum from several murine models, which have genetic alterations, nutritional alterations or both. I also analyzed serum metabolomes {cite}<code>martinez-arranz_enhancing_2015</code> of 535 patients with biopsy-proven NAFLD (353 with simple steatosis and 182 with NASH) and compared them with serum metabolomes of these murine models {cite}<code>barr_liquid_2010,alonso_metabolomic_2017,iruarrizaga-lejarreta_role_2017</code>. In a previous analysis, we identified several subtypes of NAFLD using cluster analysis and we recognized markers that differentiate steatosis from NASH in each subtype.</p>
 <p>In this study, a specific Genetic Algorithm (GA) has been developed to improve the identification of these subtypes in a human cohort and create a scalable methodology to identify subtypes of NAFLD. The final aim of this work is to develop a methodology for precision care in NAFLD.</p>
 <p>The genetic algorithm has been developed in Python language and NumPy Style Python Docstrings<sup id="fnref:style1"><a class="footnote-ref" href="#fn:style1">1</a></sup><sup id="fnref:style2"><a class="footnote-ref" href="#fn:style2">2</a></sup> has been used to document the package.</p>
-<h2 id="figure_figuresalgorithm_functionspng">```{figure} figures/algorithm_functions.png<a class="headerlink" href="#figure_figuresalgorithm_functionspng" title="Permanent link">#</a></h2>
-<p>alt: Genetic Algorithm
-class: bg-primary
-width: 90%
-align: center
-name: algorithm_functions</p>
-<hr />
-<p>Genetic algorithm schema and functions associated with each step.</p>
-<pre><code>
-  * **INITIAL POPULATION/POPULATION**
-    * \_get\_father(): See {ref}`tools:_get_father` function.
-    * \_get\_population(): See {ref}`tools:_get_population` function.  
-
-  * **FITNESS**         
-    * \_get\_fitness(): See {ref}`fitness:_get_fitness` function.
-    * \_get_fitness_robust(): See {ref}`fitness:_get_fitness_robust` function.
-    * \_get_fitness_l(): See {ref}`fitness:_get_fitness_l` function. 
-
-  * **SELECTION**     
-    * \_selection(): See {ref}`operators:_selection` function.
-
-  * **CROSSOVER**     
-    * \_crossover(): See {ref}`operators:_crossover` function.
-    * \_arithmetic\_crossover(): See {ref}`operators:_arithmetic_crossover` function.
-
-  * **MUTATION**
-    * \_mutation(): See {ref}`operators:_mutation` function. 
-
-````{admonition} Genetic Algorithms Applied to Translational Strategy in NASH
-:class: dropdown
-```{figure} figures/translational_strategy.png
----
-alt: Genetic Algorithms Applied to Translational Strategy in NASH
-class: bg-primary
-width: 80%
-align: center
-name: genetic_algorithms_applied_to_translational strategy_in_nash
----
-Genetic Algorithms Applied to Translational Strategy in NASH. Learning from Mouse Models. Poster presented in the II Jornadas Doctorales de la UPV/EHU 2019.
-</code></pre>
-<p>````</p>
+<p><img alt="" src="figures/algorithm_functions.png" />
+<em>Genetic algorithm schema and functions associated with each step.</em></p>
+<ul>
+<li>
+<p><strong>INITIAL POPULATION/POPULATION</strong></p>
+<ul>
+<li>_get_father(): See {ref}<code>tools:_get_father</code> function.</li>
+<li>_get_population(): See {ref}<code>tools:_get_population</code> function.  </li>
+</ul>
+</li>
+<li>
+<p><strong>FITNESS</strong>         </p>
+<ul>
+<li>_get_fitness(): See {ref}<code>fitness:_get_fitness</code> function.</li>
+<li>_get_fitness_robust(): See {ref}<code>fitness:_get_fitness_robust</code> function.</li>
+<li>_get_fitness_l(): See {ref}<code>fitness:_get_fitness_l</code> function. </li>
+</ul>
+</li>
+<li>
+<p><strong>SELECTION</strong>     </p>
+<ul>
+<li>_selection(): See {ref}<code>operators:_selection</code> function.</li>
+</ul>
+</li>
+<li>
+<p><strong>CROSSOVER</strong>     </p>
+<ul>
+<li>_crossover(): See {ref}<code>operators:_crossover</code> function.</li>
+<li>_arithmetic_crossover(): See {ref}<code>operators:_arithmetic_crossover</code> function.</li>
+</ul>
+</li>
+<li>
+<p><strong>MUTATION</strong></p>
+<ul>
+<li>_mutation(): See {ref}<code>operators:_mutation</code> function. </li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="figures/translational_strategy.png" />
+<em>Genetic Algorithms Applied to Translational Strategy in NASH. Learning from Mouse Models. Poster presented in the II Jornadas Doctorales de la UPV/EHU 2019.</em></p>
 <h2 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">#</a></h2>
 <p><code>{bibliography} bibliography/introduction.bib
 :style: alpha # plain, unsrt, unsrtalpha</code></p>
@@ -192,7 +190,7 @@ Genetic Algorithms Applied to Translational Strategy in NASH. Learning from Mous
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p><b>PyGenMet</b> <br>Copyright &#169; 2024 <a href="https://github.com/imarranz">Ibon Martínez-Arranz</a><br></p>
+      <p><b>PyGenMet: A Python Package for Genetic Algorithms</b> <br>Copyright &#169; 2024 <a href="https://github.com/imarranz">Ibon Martínez-Arranz</a><br></p>
     
   </div>
 
