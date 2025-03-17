@@ -1,4 +1,3 @@
-__version__ = "1.0"
 
 import numpy as np
 import pandas as pd
@@ -8,7 +7,6 @@ import random
 import datetime
 ##from datetime.datetime import now
 from scipy.stats import pearsonr
-
 
 from . operators.crossover_functions import _crossover, _arithmetic_crossover
 from . operators.mutation_functions import _mutation
@@ -33,3 +31,6 @@ __all__ = ['chromosome',
            '_read_metabolic_model_data',
            '_hamming',
            '_grouping_by']
+
+__version__ = "1.0"
+__author__ = "Ibon Martínez-Arranz <ibon.martinez@imarranz.com>"

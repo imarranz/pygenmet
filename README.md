@@ -1186,6 +1186,8 @@ ax.legend(frameon = False, title = r'Probability', bbox_to_anchor = [1.0, 1.0]);
 
 ## References
 
+Ibon Martínez-Arranz, Cristina Alonso, Rebeca Mayo, Itziar Mincholé, José M. Mato, and Dae-Jin Lee (2024). _Genetic algorithms applied to translational strategy in metabolic-dysfunction associated steatohepatitis (MASH). Learning from mouse models_. Computer Methods and Programs in Biomedicine, October 2024. https://doi.org/10.1016/j.cmpb.2024.108346
+
 Alonso, C., Fernández-Ramos, D., Varela-Rey, M., Martínez-Arranz, I., Navasa, N., Van Liempd, S. M., Lavin, J. L., Mayo, R., Ilisso, C. P., de Juan, V. G., Iruarrizaga-Lejarreta, M., delaCruz-Villar, L., Mincholé, I., Robinson, A., Crespo, J., Martín-Duce, A., Romero-Gomez, M., Sann, H., Platon, J., ... Mato, J. M. (2017). _Metabolomic Identification of Subtypes of Nonalcoholic Steatohepatitis_. Gastroenterology. https://doi.org/10.1053/j.gastro.2017.01.015
 
 Iruarrizaga-Lejarreta, M., Varela-Rey, M., Fernández-Ramos, D., Martínez-Arranz, I., Delgado, T. C., Simon, J., Gutiérrez-de Juan, V., delaCruz-Villar, L., Azkargorta, M., Lavin, J. L., Mayo, R., Van Liempd, S. M., Aurrekoetxea, I., Buqué, X., Delle Cave, D., Peña, A., Rodríguez-Cuesta, J., Aransay, A. M., Elortza, F., ... Mato, J. M. (2017). _Role of aramchol in steatohepatitis and fibrosis in mice_. Hepatology Communications. https://doi.org/10.1002/hep4.1107
